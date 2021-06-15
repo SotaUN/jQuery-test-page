@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>jQuery-test-page</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        function fsize(){
+            return parseInt($('h1').css("font-size"));
+        }
+        $(function(){
+            $("#big").click(function(){
+                $('h1').css("font-size",String(fsize() + 5) + "px");
+            });
+            $("#small").click(function(){
+                $('h1').css("font-size",String(fsize() - 5) + "px");
+            });
+            $("#submit").click(function(){
+                alert(fsize());
+                const memo = $('#memo').val();
+                $('h1').text(memo);
+            });
+        });
+
+        
+
+    </script>
+  </head>
+  <body>
+    <button id = "big">+</button>
+    <button id = "small">-</button>
+    <h1>こんにちは</h1>
+    <div>
+    </div>
+    <form>
+        <input type = "text" id = "memo">
+        <button id = "submit" type = "button">送信</button>
+    </form>
+  </body>
+</html>
