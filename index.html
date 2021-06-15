@@ -16,7 +16,6 @@
                 $('h1').css("font-size",String(fsize() - 5) + "px");
             });
             $("#submit").click(function(){
-                alert(fsize());
                 const memo = $('#memo').val();
                 $('h1').text(memo);
             });
@@ -34,7 +33,7 @@
     </div>
     <form>
         <input type = "text" id = "memo">
-        <button id = "submit" type = "button">送信</button>
+        <button id = "submit" type = "button">決定</button>
     </form>
   </body>
 </html>
